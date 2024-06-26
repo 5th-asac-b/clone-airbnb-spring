@@ -29,5 +29,6 @@ public class Accommodation {
     @Column(nullable = false, columnDefinition = "int default 0")
     private Integer reviewCount;
 
-
+    @Column(nullable = false)
+    private Integer accommodation_price;
 }
