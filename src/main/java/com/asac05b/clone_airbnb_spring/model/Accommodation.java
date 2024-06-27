@@ -1,7 +1,11 @@
 package com.asac05b.clone_airbnb_spring.model;
 
-import jakarta.persistence.*;
-
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import java.math.BigDecimal;
 
 @Entity
@@ -30,5 +34,5 @@ public class Accommodation {
     private Integer reviewCount;
 
     @Column(nullable = false)
-    private Integer accommodation_price;
+    private Integer accommodationPrice;
 }
