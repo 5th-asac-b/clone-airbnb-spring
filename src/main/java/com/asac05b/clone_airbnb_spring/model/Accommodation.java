@@ -7,8 +7,16 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import java.math.BigDecimal;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "Accommodation")
 public class Accommodation {
     @Id
@@ -18,17 +26,17 @@ public class Accommodation {
     @Column(nullable = false)
     private String accommodationName;
 
+    @Column(nullable = false, columnDefinition = "decimal(3,2) default 1.00")
+    private BigDecimal accommodationRating;
+
     @Column(nullable = false)
-    private String locationName;
+    private Boolean guestFavorite;
 
     @Column(nullable = false)
     private String locationAlias;
 
     @Column(nullable = false)
-    private Boolean guestFavorite;
-
-    @Column(nullable = false, columnDefinition = "decimal(3,2) default 1.00")
-    private BigDecimal accommodationRating;
+    private String locationName;
 
     @Column(nullable = false, columnDefinition = "int default 0")
     private Integer reviewCount;
