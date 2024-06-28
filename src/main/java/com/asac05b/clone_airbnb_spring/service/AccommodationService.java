@@ -3,6 +3,8 @@ package com.asac05b.clone_airbnb_spring.service;
 import com.asac05b.clone_airbnb_spring.AccommodationRepository;
 import com.asac05b.clone_airbnb_spring.model.Accommodation;
 import java.util.List;
+import java.util.Optional;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -20,5 +22,8 @@ public class AccommodationService {
         return accommodationRepository.findAll();
     }
 
+    public Accommodation findById(Integer id) {
+        return accommodationRepository.findById(id).get();
+    }
 
 }
