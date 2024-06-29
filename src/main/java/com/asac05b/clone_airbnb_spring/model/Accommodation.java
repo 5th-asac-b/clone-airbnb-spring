@@ -1,12 +1,15 @@
 package com.asac05b.clone_airbnb_spring.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import java.math.BigDecimal;
+import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -43,4 +46,8 @@ public class Accommodation {
 
     @Column(nullable = false)
     private Integer accommodationPrice;
+
+    @OneToMany(mappedBy = "accommodation")
+    @JsonManagedReference
+    private List<AccommodationImage> images;
 }

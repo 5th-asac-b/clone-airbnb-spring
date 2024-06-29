@@ -1,10 +1,8 @@
 package com.asac05b.clone_airbnb_spring.service;
 
-import com.asac05b.clone_airbnb_spring.AccommodationRepository;
 import com.asac05b.clone_airbnb_spring.model.Accommodation;
+import com.asac05b.clone_airbnb_spring.repository.AccommodationRepository;
 import java.util.List;
-import java.util.Optional;
-
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
