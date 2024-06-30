@@ -16,8 +16,8 @@ public class AccommodationDTO {
 
 
     // Dto 수정, Dto를 통해 필요한 데이터만 반환하도록 구현
-    public Accommodation of() {
-        return new Accommodation(accommodationId, accommodationName, locationName,
-                locationAlias, guestFavorite, accommodationRating, reviewCount, accommodationPrice);
-    }
+//    public Accommodation of() {
+//        return new Accommodation(accommodationId, accommodationName, locationName,
+//                locationAlias, guestFavorite, accommodationRating, reviewCount, accommodationPrice);
+//    }
 }

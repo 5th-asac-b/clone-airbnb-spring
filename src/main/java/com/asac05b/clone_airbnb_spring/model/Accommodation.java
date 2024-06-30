@@ -55,4 +55,8 @@ public class Accommodation {
 
     @OneToMany(mappedBy = "accommodation", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Host> hosts;
+
+    @OneToMany(mappedBy = "accommodation")
+    @JsonManagedReference("accommodation-reviews")
+    private List<Review> reviews;
 }
