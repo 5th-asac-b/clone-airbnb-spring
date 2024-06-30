@@ -11,7 +11,7 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addMapping("/api/**")
                 .allowedOrigins("http://localhost:3000",
                         "https://clone-airbnb-nextjs-ten.vercel.app",
-                        "https://clone-airbnb-nextjs-hazel.vercel.app/",
+                        "https://clone-airbnb-nextjs-hazel.vercel.app",
                         "https://clone-airbnb-nextjs-git-main-dradradres-projects.vercel.app",
                         "https://clone-airbnb-nextjs-ior71ds5l-dradradres-projects.vercel.app",
                         "https://clone-airbnb-nextjs-git-main-thereisnames-projects.vercel.app",
