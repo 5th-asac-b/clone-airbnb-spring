@@ -1,9 +1,16 @@
 package com.asac05b.clone_airbnb_spring.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
 @Entity
 @Table(name = "Member")
 public class Member {
@@ -34,4 +41,7 @@ public class Member {
     @Column(nullable = false)
     private String location;
 
+    @OneToMany(mappedBy = "member")
+    @JsonManagedReference("member-reviews")
+    private List<Review> reviews;
 }

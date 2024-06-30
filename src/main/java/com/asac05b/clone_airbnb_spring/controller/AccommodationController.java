@@ -6,7 +6,12 @@ import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
@@ -26,10 +31,10 @@ public class AccommodationController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Accommodation>> getAll() {
+    public ResponseEntity<Accommodation> getAll() {
         try {
             List<Accommodation> accommodations = accommodationService.findAll();
-            return new ResponseEntity<>(accommodations, HttpStatus.OK);
+            return new ResponseEntity(accommodations, HttpStatus.OK);
 
         } catch (Exception e) {
 //            return new ResponseEntity<>(e., HttpStatus.INTERNAL_SERVER_ERROR);
