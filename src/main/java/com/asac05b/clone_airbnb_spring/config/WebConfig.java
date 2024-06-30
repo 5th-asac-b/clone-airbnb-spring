@@ -10,13 +10,12 @@ public class WebConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**")
                 .allowedOrigins("http://localhost:3000",
-                        "https://clone-airbnb-nextjs-flax.vercel.app",
                         "https://clone-airbnb-nextjs-ten.vercel.app",
+                        "https://clone-airbnb-nextjs-hazel.vercel.app/",
                         "https://clone-airbnb-nextjs-git-main-dradradres-projects.vercel.app",
                         "https://clone-airbnb-nextjs-ior71ds5l-dradradres-projects.vercel.app",
-                        "http://clone-airbnb-nextjs-iixlwpcmw-thereisnames-projects.vercel.app",
-                        "https://clone-airbnb-nextjs-iixlwpcmw-thereisnames-projects.vercel.app",
-                        "https://clone-airbnb-nextjs-git-main-thereisnames-projects.vercel.app")
+                        "https://clone-airbnb-nextjs-git-main-thereisnames-projects.vercel.app",
+                        "https://clone-airbnb-nextjs-13vq9quoq-thereisnames-projects.vercel.app")
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
                 .allowCredentials(true);
