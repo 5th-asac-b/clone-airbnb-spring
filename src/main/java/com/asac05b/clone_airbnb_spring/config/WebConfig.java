@@ -9,9 +9,11 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**")
-                .allowedOrigins("http://localhost:3000")
-                .allowedOrigins("https://clone-airbnb-nextjs-flax.vercel.app")
-                .allowedOrigins("https://clone-airbnb-nextjs-iixlwpcmw-thereisnames-projects.vercel.app")
+                .allowedOrigins("http://localhost:3000",
+                        "https://clone-airbnb-nextjs-flax.vercel.app",
+                        "http://clone-airbnb-nextjs-iixlwpcmw-thereisnames-projects.vercel.app",
+                        "https://clone-airbnb-nextjs-iixlwpcmw-thereisnames-projects.vercel.app",
+                        "https://clone-airbnb-nextjs-git-main-thereisnames-projects.vercel.app")
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
                 .allowCredentials(true);
