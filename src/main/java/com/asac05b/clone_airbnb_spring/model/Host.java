@@ -1,7 +1,14 @@
 package com.asac05b.clone_airbnb_spring.model;
 
-import jakarta.persistence.*;
-
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.MapsId;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
@@ -9,6 +16,7 @@ import java.time.LocalDateTime;
 @Table(name = "Host")
 public class Host {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer userId;
 
     @Column(nullable = false)
@@ -27,8 +35,5 @@ public class Host {
     @MapsId
     @JoinColumn(name = "user_id")
     private Member member;
-
-    public Host() {
-    }
 
 }
